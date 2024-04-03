@@ -4,6 +4,9 @@ FROM openjdk:8-jre-slim
 # 指定容器内的工作目录
 WORKDIR /app
 
+# 创建一个目录用于存放上传的文件
+RUN mkdir -p /app/upload
+
 # 将构建的可执行jar文件复制到容器内的工作目录
 COPY target/module_campus-0.0.1-SNAPSHOT.jar app.jar
 

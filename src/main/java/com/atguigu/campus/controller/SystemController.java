@@ -145,6 +145,9 @@ public class SystemController {
         return Result.ok(map);
     }
 
+    /**
+     * aws files upload 
+     * */
     @PostMapping("/headerImgUpload")
     public Result<Object> headerImgUpload(@RequestPart("multipartFile") MultipartFile multipartFile) throws IOException{
         //First, get the name of uploaded file.

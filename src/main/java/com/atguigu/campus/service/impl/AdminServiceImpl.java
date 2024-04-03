@@ -17,8 +17,6 @@ import javax.annotation.Resource;
 public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements AdminService{
 
     @Resource AdminMapper adminMapper;
-
-
     @Override
     public Admin selectUserByUsernameAndPwd(String username, String password) {
         return adminMapper.selectOne(new LambdaQueryWrapper<Admin>().eq(Admin::getName,username).eq(Admin::getPassword,password));
